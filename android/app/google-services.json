@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "928254517525",
+    "project_id": "motion-talk-ef0b5",
+    "storage_bucket": "motion-talk-ef0b5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:928254517525:android:b9e6f6bbb912ffdd98c91c",
+        "android_client_info": {
+          "package_name": "com.example.motion_talk"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMRZiKMOSegRw9bZhU3vNoI_E5qPVGq8w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
