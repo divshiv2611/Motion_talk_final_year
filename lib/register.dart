@@ -49,23 +49,23 @@ class _MyRegisterState extends State<MyRegister> {
                     SizedBox(
                       height: 30,
                     ),
-                    reusableTextField("Enter Phone Number",
-                        Icons.person_outline, false, _phoneTextController),
+                    reusableText("Enter Phone Number",
+                        Icons.phone_outlined, _phoneTextController),
                     SizedBox(
                       height: 40,
                     ),
-                    reusableTextField("Enter Email", Icons.person_outline,
+                    reusableTextField("Enter Email", Icons.email_outlined,
                         false, _emailTextController),
                     SizedBox(
                       height: 30,
                     ),
-                    reusableTextField("Enter Aadhar Number",
-                        Icons.person_outline, false, _aadharTextController),
+                    reusableText("Enter Aadhar Number",
+                        Icons.person_outlined, _aadharTextController),
                     SizedBox(
                       height: 30,
                     ),
                     reusableTextField("Enter Password(Min 6 Char)",
-                        Icons.person_outline, false, _passwordTextController),
+                        Icons.lock_outline, true, _passwordTextController),
                     SizedBox(
                       height: 30,
                     ),
