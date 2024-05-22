@@ -1,6 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:motion_talk/reuseable/reusable_widget.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 class MyRegister extends StatefulWidget {
   const MyRegister({super.key});
@@ -90,6 +92,14 @@ class _MyRegisterState extends State<MyRegister> {
                                       email: _emailTextController.text,
                                       password: _passwordTextController.text)
                                   .then((value) {
+                                    CollectionReference collRef=FirebaseFirestore.instance.collection('user');
+                                    collRef.add({
+                                      'Name': _nameTextController.text,
+                                      'Email': _emailTextController.text,
+                                      'Phone': _phoneTextController.text,
+                                      'Password': _passwordTextController.text,
+                                      'Aadhar_Number': _aadharTextController.text,
+                                    });
                                 Navigator.pushNamed(context, 'login');
                               }).onError((error, stackTrace) {
                                 print("erroe ${error.toString()}");
