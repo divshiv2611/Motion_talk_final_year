@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:motion_talk/reuseable/reusable_widget.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+
 
 class MyForgot extends StatefulWidget {
   const MyForgot({super.key});
@@ -8,6 +11,8 @@ class MyForgot extends StatefulWidget {
 }
 
 class _MyForgotState extends State<MyForgot> {
+  TextEditingController _emailTextController = TextEditingController();
+  final auth= FirebaseAuth.instance;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -31,7 +36,7 @@ class _MyForgotState extends State<MyForgot> {
             ),
             Container(
               padding: EdgeInsets.only(left: 35, top:225),
-              child: Text('Enter the phone number \nassociated with your account \nto receive OTP',
+              child: Text('Enter the Email \nassociated with your account \nto change your Password',
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 20
@@ -45,16 +50,10 @@ class _MyForgotState extends State<MyForgot> {
                 ),
                 child: Column(
                   children: [
-                    TextField(
-                      keyboardType: TextInputType.number,
-                      decoration: InputDecoration(
-                          fillColor: Colors.grey.shade100,
-                          filled: true,
-                          hintText: 'Phone Number',
-                          border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(10)
-                          )
-                      ),
+                    reusableTextField("Enter Email", Icons.email_outlined,
+                        false, _emailTextController),
+                    SizedBox(
+                      height: 30,
                     ),
 
                     SizedBox(
@@ -63,7 +62,7 @@ class _MyForgotState extends State<MyForgot> {
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [Text('OTP Verification', style: TextStyle(
+                      children: [Text('Change Password', style: TextStyle(
                           color: Color(0xff006491),
                           fontSize: 27, fontWeight: FontWeight.w700),
                       ),
@@ -73,7 +72,12 @@ class _MyForgotState extends State<MyForgot> {
                           child: IconButton(
                             color: Colors.white,
                             onPressed: (){
-                              Navigator.pushNamed(context, 'otp');
+                             auth.sendPasswordResetEmail(email: _emailTextController.text.toString().trim())
+                                  .then((value) {
+                                Navigator.pushNamed(context, 'login');
+                              }).onError((error, stackTrace) {
+                                print("erroe ${error.toString()}");
+                              });
                             },
                             icon: Icon(Icons.arrow_forward),
                           ),
