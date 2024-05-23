@@ -27,7 +27,8 @@ if (flutterVersionName == null) {
 
 android {
     namespace "com.example.motion_talk"
-    compileSdkVersion flutter.compileSdkVersion
+    compileSdkVersion 34
+//    flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
 
     compileOptions {

@@ -15,7 +15,10 @@ void main() async {
   Platform.isAndroid
       ? await Firebase.initializeApp(
           options: FirebaseOptions(
-
+            apiKey: "AIzaSyDMRZiKMOSegRw9bZhU3vNoI_E5qPVGq8w",
+            appId: "1:928254517525:android:b9e6f6bbb912ffdd98c91c",
+            messagingSenderId: "928254517525",
+            projectId: "motion-talk-ef0b5",
           ),
         )
       : await Firebase.initializeApp();
