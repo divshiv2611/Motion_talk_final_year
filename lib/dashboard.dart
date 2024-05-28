@@ -320,9 +320,9 @@ class _MyDashboardState extends State<MyDashboard> {
                     ),
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {Navigator.pushNamed(context, 'test');},
                     child: Text(
-                      'Create New',
+                      'Test Yourself',
                       style: TextStyle(
                           decoration: TextDecoration.underline,
                           fontSize: 16,

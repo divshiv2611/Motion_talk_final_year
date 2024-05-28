@@ -5,14 +5,14 @@ import 'package:flutter_tflite/flutter_tflite.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:developer' as devtools;
 
-class MyCamera extends StatefulWidget {
-  const MyCamera({super.key});
+class testYourself extends StatefulWidget {
+  const testYourself({super.key});
 
   @override
-  State<MyCamera> createState() => _MyCameraState();
+  State<testYourself> createState() => _testYourselfState();
 }
 
-class _MyCameraState extends State<MyCamera> {
+class _testYourselfState extends State<testYourself> {
 
 
   File? filePath;
@@ -114,7 +114,7 @@ class _MyCameraState extends State<MyCamera> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Motion Talk"),
+        title: const Text("Test Yourself"),
       ),
       body: SingleChildScrollView(
         child: Center(
@@ -168,12 +168,12 @@ class _MyCameraState extends State<MyCamera> {
                               const SizedBox(
                                 height: 12,
                               ),
-                              // Text(
-                              //   "The Accuracy is ${confidence.toStringAsFixed(0)}%",
-                              //   style: const TextStyle(
-                              //     fontSize: 18,
-                              //   ),
-                              // ),
+                              Text(
+                                "The Accuracy is ${confidence.toStringAsFixed(0)}%",
+                                style: const TextStyle(
+                                  fontSize: 18,
+                                ),
+                              ),
                               const SizedBox(
                                 height: 12,
                               ),

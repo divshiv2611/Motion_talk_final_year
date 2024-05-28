@@ -1,3 +1,5 @@
+// import 'dart:js';
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:motion_talk/camera.dart';
@@ -8,17 +10,17 @@ import 'package:motion_talk/otp.dart';
 import 'package:motion_talk/post.dart';
 import 'package:motion_talk/register.dart';
 import 'package:motion_talk/setPassword.dart';
+import 'package:motion_talk/test.dart';
 import 'dart:io' show Platform;
+
+import 'package:motion_talk/test.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   Platform.isAndroid
       ? await Firebase.initializeApp(
           options: FirebaseOptions(
-            apiKey: "AIzaSyDMRZiKMOSegRw9bZhU3vNoI_E5qPVGq8w",
-            appId: "1:928254517525:android:b9e6f6bbb912ffdd98c91c",
-            messagingSenderId: "928254517525",
-            projectId: "motion-talk-ef0b5",
+
           ),
         )
       : await Firebase.initializeApp();
@@ -34,6 +36,7 @@ void main() async {
       'setPassword': (context) => MyPassword(),
       'post': (context) => MyPost(),
       'camera': (context) => MyCamera(),
+      'test': (context)=>testYourself(),
     },
   ));
 }
