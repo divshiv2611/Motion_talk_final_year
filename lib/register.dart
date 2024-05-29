@@ -103,9 +103,10 @@ class _MyRegisterState extends State<MyRegister> {
                                     });
                                 Navigator.pushNamed(context, 'login');
                                 Fluttertoast.showToast(msg: 'User Registered Successfully');
-                              }).onError((error, stackTrace) {
+                              }).
+                              onError((error, stackTrace) {
                                 print("erroe ${error.toString()}");
-                                Fluttertoast.showToast(msg: 'Kindly provide correct credentials');
+                                Fluttertoast.showToast(msg: 'Error ${error.toString()}');
                               });
                             },
                             icon: Icon(Icons.arrow_forward),

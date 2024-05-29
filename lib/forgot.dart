@@ -79,7 +79,7 @@ class _MyForgotState extends State<MyForgot> {
                                 Fluttertoast.showToast(msg: 'Set your password using your registered email');
                               }).onError((error, stackTrace) {
                                 print("erroe ${error.toString()}");
-                                Fluttertoast.showToast(msg: 'Kindly provide proper email');
+                                Fluttertoast.showToast(msg: 'Error ${error.toString()}');
                               });
                             },
                             icon: Icon(Icons.arrow_forward),

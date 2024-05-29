@@ -72,7 +72,7 @@ class _MyLoginState extends State<MyLogin> {
                                 Fluttertoast.showToast(msg: 'User Login successful');
                               }).onError((error, stackTrace) {
                                 print("Error ${error.toString()}");
-                                Fluttertoast.showToast(msg: 'Kindly provide write credentails');
+                                Fluttertoast.showToast(msg: 'Error ${error.toString()}');
                               });
                             },
                             icon: Icon(Icons.arrow_forward),

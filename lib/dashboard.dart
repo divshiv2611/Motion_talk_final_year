@@ -339,8 +339,8 @@ class _MyDashboardState extends State<MyDashboard> {
               ),
               bulidProjectRow('ISL Blog'),
               bulidProjectRow('ISL Learning Easy Blog'),
-              bulidProjectRow('Sign Language Features'),
-              bulidProjectRow('ASL Learing'),
+              // bulidProjectRow('Sign Language Features'),
+              // bulidProjectRow('ASL Learing'),
             ],
           ))
         ],
@@ -372,7 +372,7 @@ class _MyDashboardState extends State<MyDashboard> {
           items: [
             BottomNavigationBarItem(
                 icon: Icon(Icons.dashboard), label: 'dashboard'),
-            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Post')
+            BottomNavigationBarItem(icon: Icon(Icons.dashboard), label: 'Post')
           ]),
     );
   }
