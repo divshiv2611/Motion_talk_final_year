@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:motion_talk/reuseable/reusable_widget.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 
 class MyForgot extends StatefulWidget {
@@ -75,8 +76,10 @@ class _MyForgotState extends State<MyForgot> {
                              auth.sendPasswordResetEmail(email: _emailTextController.text.toString().trim())
                                   .then((value) {
                                 Navigator.pushNamed(context, 'login');
+                                Fluttertoast.showToast(msg: 'Set your password using your registered email');
                               }).onError((error, stackTrace) {
                                 print("erroe ${error.toString()}");
+                                Fluttertoast.showToast(msg: 'Kindly provide proper email');
                               });
                             },
                             icon: Icon(Icons.arrow_forward),

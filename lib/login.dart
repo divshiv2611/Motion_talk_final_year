@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:motion_talk/reuseable/reusable_widget.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class MyLogin extends StatefulWidget {
   const MyLogin({super.key});
@@ -68,8 +69,10 @@ class _MyLoginState extends State<MyLogin> {
                                       password: _passwordTextController.text)
                                   .then((value) {
                                 Navigator.pushNamed(context, 'dashboard');
+                                Fluttertoast.showToast(msg: 'User Login successful');
                               }).onError((error, stackTrace) {
                                 print("Error ${error.toString()}");
+                                Fluttertoast.showToast(msg: 'Kindly provide write credentails');
                               });
                             },
                             icon: Icon(Icons.arrow_forward),

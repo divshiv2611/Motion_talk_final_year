@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class MyDashboard extends StatefulWidget {
   const MyDashboard({super.key});
@@ -80,6 +81,7 @@ class _MyDashboardState extends State<MyDashboard> {
                           FirebaseAuth.instance.signOut().then((value) {
                             print("Signed Out");
                             Navigator.pushNamed(context, 'login');
+                            Fluttertoast.showToast(msg: 'User logged out successfully');
                           });
                         },
                       ),

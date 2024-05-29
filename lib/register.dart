@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:motion_talk/reuseable/reusable_widget.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class MyRegister extends StatefulWidget {
   const MyRegister({super.key});
@@ -101,8 +102,10 @@ class _MyRegisterState extends State<MyRegister> {
                                       'Aadhar_Number': _aadharTextController.text,
                                     });
                                 Navigator.pushNamed(context, 'login');
+                                Fluttertoast.showToast(msg: 'User Registered Successfully');
                               }).onError((error, stackTrace) {
                                 print("erroe ${error.toString()}");
+                                Fluttertoast.showToast(msg: 'Kindly provide correct credentials');
                               });
                             },
                             icon: Icon(Icons.arrow_forward),
