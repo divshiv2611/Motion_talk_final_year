@@ -298,6 +298,24 @@ class _MyCameraState extends State<MyCamera> {
                   "Pick from gallery",
                 ),
               ),
+              // const SizedBox(
+              //   height: 8,
+              // ),
+              // ElevatedButton(
+              //   onPressed: () {
+              //     Navigator.pushNamed(context, 'signtoText');
+              //   },
+              //   style: ElevatedButton.styleFrom(
+              //       padding: const EdgeInsets.symmetric(
+              //           horizontal: 30, vertical: 10),
+              //       shape: RoundedRectangleBorder(
+              //         borderRadius: BorderRadius.circular(13),
+              //       ),
+              //       foregroundColor: Colors.black),
+              //   child: const Text(
+              //     "Sign to text",
+              //   ),
+              // ),
             ],
           ),
         ),

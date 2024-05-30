@@ -53,6 +53,9 @@ dev_dependencies:
   image_picker: ^0.8.9
   flutter_tflite: ^1.0.1
   fluttertoast: ^8.2.5
+  get: ^4.6.6
+  avatar_glow: ^3.0.1
+  speech_to_text: ^6.6.0
 
 
 # For information on the generic Dart part of this file, see the
