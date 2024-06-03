@@ -337,8 +337,8 @@ class _MyDashboardState extends State<MyDashboard> {
               const SizedBox(
                 height: 20,
               ),
-              bulidProjectRow('ISL Blog'),
-              bulidProjectRow('ISL Learning Easy Blog'),
+              bulidProjectRow('ISL Representation'),
+              // bulidProjectRow('ISL Learning Easy Blog'),
               // bulidProjectRow('Sign Language Features'),
               // bulidProjectRow('ASL Learing'),
             ],
@@ -408,7 +408,9 @@ class _MyDashboardState extends State<MyDashboard> {
           ),
           IconButton(
               color: Colors.white,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, 'learn');
+              },
               icon: Icon(
                 Icons.more_vert_rounded,
                 color: Color(0xff006491),
