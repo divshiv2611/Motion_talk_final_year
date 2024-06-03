@@ -9,7 +9,7 @@ import 'package:motion_talk/otp.dart';
 import 'package:motion_talk/post.dart';
 import 'package:motion_talk/register.dart';
 import 'package:motion_talk/setPassword.dart';
-import 'package:motion_talk/signtoText.dart';
+// import 'package:motion_talk/signtoText.dart';
 import 'package:motion_talk/test.dart';
 import 'dart:io' show Platform;
 
@@ -21,7 +21,10 @@ void main() async {
   Platform.isAndroid
       ? await Firebase.initializeApp(
           options: FirebaseOptions(
-
+            apiKey: "AIzaSyDMRZiKMOSegRw9bZhU3vNoI_E5qPVGq8w",
+            appId: "1:928254517525:android:b9e6f6bbb912ffdd98c91c",
+            messagingSenderId: "928254517525",
+            projectId: "motion-talk-ef0b5",
           ),
         )
       : await Firebase.initializeApp();
@@ -38,7 +41,7 @@ void main() async {
       'post': (context) => MyPost(),
       'camera': (context) => MyCamera(),
       'test': (context)=>testYourself(),
-      'signtoText':(context)=>Dashboard(),
+      // 'signtoText':(context)=>Dashboard(),
     },
   ));
 }

@@ -314,7 +314,7 @@ class _MyDashboardState extends State<MyDashboard> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "Blogs",
+                    "ISL Learning",
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 16,
